@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Git-finder</title>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="bg-overlay" id="bgOverlay"></div>
+
+        <div class="container">
+            <header class="header">
+                <h1 class="logo">Gitfinder</h1>
+            </header>
+
+            <div class="search-container">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="userInput" placeholder="GitHub-username..">
+                <span class="error-msg" id="errorMsg">No results</span>
+                <button class="search-btn" id="searchBtn">Search</button>
+            </div>
+
+            <div class="loader" id="loader">
+                <div class="spinner"></div>
+            </div>
+
+            <div class="profile-card" id="profileCard">
+                <div class="profile-header">
+                    <img src="" alt="Avatar" class="avatar" id="avatar">
+                    <div class="profile-info">
+                        <div class="info-top">
+                            <h2 class="name" id="name">Name</h2>
+                            <span class="joined-date" id="date">Joined Date</span>
+                        </div>
+                        <a href="#" target="_blank" class="username" id="username">@username</a>
+                    </div>
+                </div>
+
+                <p class="bio" id="bio">Bio goes here...</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-title">Repos</span>
+                        <span class="stat-value" id="repos">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-title">Followers</span>
+                        <span class="stat-value" id="followers">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-title">Following</span>
+                        <span class="stat-value" id="following">0</span>
+                    </div>
+                </div>
+
+                <div class="links-container">
+                    <div class="link-item" id="locationItem">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                        <span id="location">Not Available</span>
+                    </div>
+                    <div class="link-item" id="blogItem">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" />
+                        </svg>
+                        <a href="#" target="_blank" id="blog">Not Available</a>
+                    </div>
+                    <div class="link-item" id="linkedinItem">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                        <a href="#" target="_blank" id="linkedin">Not Available</a>
+                    </div>
+                    <div class="link-item" id="companyItem">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
+                        </svg>
+                        <span id="company">Not Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
