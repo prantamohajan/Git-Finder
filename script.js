@@ -59,6 +59,7 @@ function renderProfile(data, socials) {
     const linkedinItem = document.getElementById('linkedinItem');
     const linkedinAcc = socials.find(acc => acc.provider === 'linkedin' || acc.url.includes('linkedin.com'));
 
+    
     if (linkedinAcc) {
         linkedinEl.innerText = "LinkedIn Profile";
         linkedinEl.href = linkedinAcc.url;
